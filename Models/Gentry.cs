@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ParkingManagementSystem
+namespace ParkingManagementSystem.Models
 {
-    internal class SeasonPass
+    internal class Gentry
     {
     }
 }
