@@ -8,10 +8,33 @@ namespace ParkingManagementSystem.Models
 {
     public class Application
     {
-        public string appId { get; set; }
-        public string? name { get; set; }
-        public Vehicle vehicle { get; set; }
+        public int AppId { get; set; }
+        public string Name { get; set; }
+        public string UserId { get; set; }
+        public string Password { get; set; }
+        public int MonthStart { get; set; }
+        public int MonthEnd { get; set; }
+        public string PaymentMethod { get; set; }
+        public Vehicle Vehicle { get; set; }
 
+        public Application(int appId,string name, string userId, string password, int monthStart, int monthEnd, string paymentMethod, Vehicle vehicle) 
+        {
+            AppId = appId;
+            Name = name;
+            UserId = userId;
+            Password = password;
+            MonthStart = monthStart;
+            MonthEnd = monthEnd;
+            PaymentMethod = paymentMethod;
+            Vehicle = vehicle;
+        }
+
+        public bool ApprovePass(Application app)
+        {
+            bool approval = false;
+            
+            return approval;
+        }
         
     }
 }
