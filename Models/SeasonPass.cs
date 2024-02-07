@@ -6,13 +6,21 @@ using System.Threading.Tasks;
 
 namespace ParkingManagementSystem.Models
 {
-    public class SeasonPass
+    public abstract class SeasonPass
     {
-        public required string passId {  get; set; }
-        public string status { get; set; }
-        public string holderName { get; set; }
-        public Vehicle assignedVechicle { get; set; }
-        public string additionalStatus { get; set; }
+        public abstract string PassId {  get; set; }
+        public string Status { get; set; }
+        public string HolderName { get; set; }
+        public Vehicle AssignedVechicle { get; set; }
+        public string AdditionalStatus { get; set; }
 
+        public SeasonPass(string passId, string status, string holderName, Vehicle assignedVechicle, string additionalStatus)
+        {
+            PassId = passId;
+            Status = status;
+            HolderName = holderName;
+            AssignedVechicle = assignedVechicle;
+            AdditionalStatus = additionalStatus;
+        }
     }
 }
