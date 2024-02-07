@@ -16,8 +16,9 @@ namespace ParkingManagementSystem.Models
         public int MonthEnd { get; set; }
         public string PaymentMethod { get; set; }
         public Vehicle Vehicle { get; set; }
+        public string PassType { get; set; }
 
-        public Application(int appId,string name, string userId, string password, int monthStart, int monthEnd, string paymentMethod, Vehicle vehicle) 
+        public Application(int appId,string name, string userId, string password, int monthStart, int monthEnd, string paymentMethod, Vehicle vehicle, string passType) 
         {
             AppId = appId;
             Name = name;
@@ -27,6 +28,7 @@ namespace ParkingManagementSystem.Models
             MonthEnd = monthEnd;
             PaymentMethod = paymentMethod;
             Vehicle = vehicle;
+            PassType = passType;
         }
 
         public bool ApprovePass(Application app)

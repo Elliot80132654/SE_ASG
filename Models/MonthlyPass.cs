@@ -11,8 +11,8 @@ namespace ParkingManagementSystem.Models
         public override string PassId { get; set; } // Override PassId from SeasonPass
 
         // Constructor
-        public MonthlyPass(string passId, string status, string holderName, Vehicle assignedVehicle, string additionalStatus)
-            : base(passId, status, holderName, assignedVehicle, additionalStatus)
+        public MonthlyPass(string passId, string status, string holderName, Vehicle assignedVechicle, string additionalStatus, int startMonth, int endMonth)
+            : base(passId, status, holderName, assignedVechicle, additionalStatus, startMonth, endMonth)
         {
             
         }

@@ -11,16 +11,21 @@ namespace ParkingManagementSystem.Models
         public abstract string PassId {  get; set; }
         public string Status { get; set; }
         public string HolderName { get; set; }
-        public Vehicle AssignedVechicle { get; set; }
+        public Vehicle AVechicle { get; set; }
         public string AdditionalStatus { get; set; }
+        public int StartMonth { get; set; }
+        public int EndMonth { get; set; }
 
-        public SeasonPass(string passId, string status, string holderName, Vehicle assignedVechicle, string additionalStatus)
+
+        public SeasonPass(string passId, string status, string holderName, Vehicle assignedVechicle, string additionalStatus, int startMonth, int endMonth)
         {
             PassId = passId;
             Status = status;
             HolderName = holderName;
-            AssignedVechicle = assignedVechicle;
+            AVechicle = assignedVechicle;
             AdditionalStatus = additionalStatus;
+            StartMonth = startMonth;
+            EndMonth = endMonth;
         }
     }
 }

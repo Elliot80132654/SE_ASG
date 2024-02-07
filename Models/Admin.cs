@@ -16,7 +16,7 @@ namespace ParkingManagementSystem.Models
         }
         public void DisplayApp(Application app)
         {
-            Console.WriteLine(app.AppId.ToString(), app.Name, app.UserId, app.Password, app.MonthStart, app.MonthEnd, app.PaymentMethod, app.Vehicle);
+            Console.WriteLine(app.AppId.ToString(), app.Name, app.UserId, app.Password, app.PassType, app.MonthStart, app.MonthEnd, app.PaymentMethod, app.Vehicle);
         }
 
         public bool ProcessPass()
