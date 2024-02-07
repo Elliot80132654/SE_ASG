@@ -14,7 +14,7 @@ namespace ParkingManagementSystem.Models
         public MonthlyPass(string passId, string status, string holderName, Vehicle assignedVechicle, string additionalStatus, int startMonth, int endMonth)
             : base(passId, status, holderName, assignedVechicle, additionalStatus, startMonth, endMonth)
         {
-            
+            // Monthly Pass holders get to pass with $0 charge
         }
     }
 }

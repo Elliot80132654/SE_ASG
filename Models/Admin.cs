@@ -31,7 +31,7 @@ namespace ParkingManagementSystem.Models
             string input = Console.ReadLine();
             if (int.TryParse(input, out int number))
             {
-                Application selApp = AppList[int.Parse(input)];
+                Application selApp = AppList[int.Parse(input)]; //No safeguards to out of range
                 // Display the result
                 DisplayApp(selApp);
                 Console.WriteLine("Do you wish to approve this application? [Y/N] ");

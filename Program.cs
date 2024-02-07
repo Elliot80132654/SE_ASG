@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ParkingManagementSystem.Models;
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.Reflection.Metadata;
 
 namespace ParkingManagementSystem
 {
@@ -8,8 +10,31 @@ namespace ParkingManagementSystem
         static void Main()
         {
             DisplayMenu();
+            string user = Console.ReadLine();
+            if(int.Parse(user) == 1 ) 
+            {
+                // implement Apply season Pass here
+            }
+            else if(int.Parse(user) == 2)
+            {
+                // implement Transfer season pass here
+            }
+            else if(int.Parse(user) == 3)
+            {
+                // implement Renew Season Pass
+            }
+            else if (int.Parse(user) == 4)
+            {
+                // Terminate Season Pass
+            }
+            else if (int.Parse(user) == 5) 
+            {
+                List<Application> applications = new List<Application>();
+                // create dummy data
 
-
+                Admin ad = new Admin(applications);
+                ad.ProcessPass();
+            }
             // Example usage of Carpark
             Carpark campusCarpark = new Carpark(1, "Campus Carpark", "Main Campus", 1, 0);
 
@@ -26,7 +51,9 @@ namespace ParkingManagementSystem
                 "\n2. Transfer Season Pass" +
                 "\n3. Renew Season Pass" +
                 "\n4. Terminate Season Pass" +
-                "\n5. Process Season Pass Application");
+                "\n5. Process Season Pass Application"+
+                "\n" +
+                "\nYour option: ");
         }
     }
 }
