@@ -10,7 +10,7 @@ namespace ParkingManagementSystem.Models
     {
         public required string LicensePlate { get; set; }
         public string Type { get; set; }
-        public SeasonPass AssignedSeasonPass { get; set; }
+        public SeasonPass? AssignedSeasonPass { get; set; }
 
         public Vehicle(string licensePlate,string type, SeasonPass assignedSeasonPass) 
         {
@@ -19,5 +19,6 @@ namespace ParkingManagementSystem.Models
             AssignedSeasonPass = assignedSeasonPass;
 
         }
+        public Vehicle() { } //Blank constructor to use dummy data
     }
 }

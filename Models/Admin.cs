@@ -16,10 +16,10 @@ namespace ParkingManagementSystem.Models
         }
         public void DisplayApp(Application app)
         {
-            Console.WriteLine(app.AppId.ToString(), app.Name, app.UserId, app.Password, app.PassType, app.MonthStart, app.MonthEnd, app.PaymentMethod, app.Vehicle);
+            Console.WriteLine(app.AppId.ToString(), app.Name, app.UserId, app.Password, app.PassType, app.MonthStart, app.MonthEnd, app.PaymentMethod);
         }
 
-        public bool ProcessPass()
+        public bool ProcessPass(List<Application> appList)
         {
             bool approval = false;
             bool validInput = false;
@@ -31,7 +31,7 @@ namespace ParkingManagementSystem.Models
             string input = Console.ReadLine();
             if (int.TryParse(input, out int number))
             {
-                Application selApp = AppList[int.Parse(input)]; //No safeguards to out of range
+                Application selApp = appList[int.Parse(input)]; //No safeguards to out of range
                 // Display the result
                 DisplayApp(selApp);
                 Console.WriteLine("Do you wish to approve this application? [Y/N] ");
