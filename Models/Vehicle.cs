@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ParkingManagementSystem.Models
 {
-    internal class Vehicle
+    public class Vehicle
     {
+        public required string licensePlate { get; set; }
+        public string type { get; set; }
+        public SeasonPass assignedSeasonPass { get; set; }
+
     }
 }

@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace ParkingManagementSystem.Models
 {
-    internal class Application
+    public class Application
     {
+        public string appId { get; set; }
+        public string? name { get; set; }
+        public Vehicle vehicle { get; set; }
+
+        
     }
 }

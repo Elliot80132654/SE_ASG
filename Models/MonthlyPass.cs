@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ParkingManagementSystem.Models
 {
-    internal class MonthlyPass : SeasonPass
+    public class MonthlyPass : SeasonPass
     {
     }
 }
