@@ -9,6 +9,9 @@ namespace ParkingManagementSystem
     {
         static void Main()
         {
+            Vehicle vehicle = new Vehicle("ABC123", "Car", null);
+            SeasonPass monthlyPass = new MonthlyPass("123", "Active", "John Doe", vehicle, "AdditionalStatus", 1, 12);
+
             DisplayMenu();
             string user = Console.ReadLine();
             if(int.Parse(user) == 1 ) 
@@ -25,6 +28,7 @@ namespace ParkingManagementSystem
             }
             else if (int.Parse(user) == 4)
             {
+                monthlyPass.TerminateSeasonPass("reason");
                 // Terminate Season Pass
             }
             else if (int.Parse(user) == 5) 
@@ -38,11 +42,11 @@ namespace ParkingManagementSystem
             // Example usage of Carpark
             Carpark campusCarpark = new Carpark(1, "Campus Carpark", "Main Campus", 1, 0);
 
-            campusCarpark.ParkCar();
-            campusCarpark.ParkMotorbike();
+            //campusCarpark.ParkCar();
+            //campusCarpark.ParkMotorbike();
 
-            campusCarpark.VacateCarSpot();
-            campusCarpark.VacateMotorbikeSpot();
+            //campusCarpark.VacateCarSpot();
+            //campusCarpark.VacateMotorbikeSpot();
         }
         public static void DisplayMenu()
         {

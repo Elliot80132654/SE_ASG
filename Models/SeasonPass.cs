@@ -27,5 +27,17 @@ namespace ParkingManagementSystem.Models
             StartMonth = startMonth;
             EndMonth = endMonth;
         }
+
+
+        // Terminate the season pass
+        public void TerminateSeasonPass(string reason)
+        {
+            // Your termination logic here
+            Status = "Terminated";
+            AdditionalStatus = reason;
+            AVechicle = null; // Clear the assigned vehicle
+
+            Console.WriteLine("the pass has been terminated");
+        }
     }
 }
