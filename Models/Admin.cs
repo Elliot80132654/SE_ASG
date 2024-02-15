@@ -11,9 +11,10 @@ namespace ParkingManagementSystem.Models
         public List<Application> AppList {  get; set; }
         public List<SeasonPass> PassList { get; set; }
 
-        public Admin(List<Application> appList)
+        public Admin(List<Application> appList, List<SeasonPass> passList)
         {
             AppList = appList;
+            PassList = passList;
         }
         public void DisplayApp(Application app)
         {
@@ -44,6 +45,7 @@ namespace ParkingManagementSystem.Models
                     {
                         approval = true;
                         validInput = true;
+                        selApp.ApprovedPass(selApp);
                     }
                     else if (cfm.ToLower() == "n")
                     {
@@ -60,7 +62,6 @@ namespace ParkingManagementSystem.Models
             {
                 Console.WriteLine("Invalid input. Please enter a valid ID.");
             }
-
             return approval;
         }
 

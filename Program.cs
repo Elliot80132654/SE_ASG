@@ -51,10 +51,12 @@ namespace ParkingManagementSystem
             else if (int.Parse(user) == 5)
             {
                 List<Application> applications = new List<Application>();
+                List<SeasonPass> passList = new List<SeasonPass>();
                 // create dummy data
 
-                Admin ad = new Admin(applications);
+                Admin ad = new Admin(applications,passList);
                 ad.ProcessSeasonPass();
+                
             }
             // Example usage of Carpark
             Carpark campusCarpark = new Carpark(1, "Campus Carpark", "Main Campus", 1, 0);
