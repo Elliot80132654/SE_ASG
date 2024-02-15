@@ -1,4 +1,5 @@
 ﻿using ParkingManagementSystem.Models;
+using ParkingManagementSystem.Services;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Reflection.Metadata;
@@ -10,7 +11,8 @@ namespace ParkingManagementSystem
         static void Main()
         {
             Vehicle vehicle = new Vehicle("ABC123", "Car", null);
-            SeasonPass monthlyPass = new MonthlyPass("123", "Active", "John Doe", vehicle, "AdditionalStatus", 1, 12);
+            SeasonPass monthlyPass = new MonthlyPass("123", "Active", "John Doe", vehicle, "AdditionalStatus", 1, 2);
+
 
             DisplayMenu();
             string user = Console.ReadLine();
@@ -24,7 +26,21 @@ namespace ParkingManagementSystem
             }
             else if(int.Parse(user) == 3)
             {
-                // implement Renew Season Pass
+                Console.WriteLine("Please enter your season pass ID to renew:");
+                string passId = Console.ReadLine();
+                // Use the static method to get the season pass
+                SeasonPass pass = SeasonPassRepository.GetSeasonPassById(passId);
+
+                // Check if the returned pass is indeed a MonthlyPass
+                if (pass is MonthlyPass validPass)
+                {
+                    RenewSeasonPass renewService = new RenewSeasonPass();
+                    renewService.Renew(validPass); // Use the new variable name 'validPass'
+                }
+                else
+                {
+                    Console.WriteLine("Invalid season pass ID. Please try again.");
+                }
             }
             else if (int.Parse(user) == 4)
             {
