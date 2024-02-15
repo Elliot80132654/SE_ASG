@@ -31,11 +31,18 @@ namespace ParkingManagementSystem.Models
             PassType = passType;
         }
 
-        public bool ApprovePass(Application app)
+        public void ApprovedPass(Application app)
         {
-            bool approval = false;
-            
-            return approval;
+            String passType = app.PassType;
+
+            if(passType.ToLower() == "monthly")
+            {
+                SeasonPass pass = new MonthlyPass(app.AppId.ToString(),"valid",app.Name,null,null,DateTime.Now.Month, ((DateTime.Now.Month)+1));
+            }
+            else if(passType.ToLower() == "daily")
+            {
+                SeasonPass pass = new DailyPass(app.AppId.ToString(), "valid", app.Name, null, null, DateTime.Now.Month, ((DateTime.Now.Month) + 1),5);
+            }
         }
         
     }

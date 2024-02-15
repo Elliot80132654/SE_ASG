@@ -8,5 +8,7 @@ namespace ParkingManagementSystem.Services
 {
     internal class ProcessSeasonPass
     {
+
+        
     }
 }

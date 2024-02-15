@@ -28,7 +28,6 @@ namespace ParkingManagementSystem.Models
             EndMonth = endMonth;
         }
 
-
         // Terminate the season pass
         public void TerminateSeasonPass(string reason)
         {
