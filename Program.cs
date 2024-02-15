@@ -10,6 +10,7 @@ namespace ParkingManagementSystem
     {
         static void Main()
         {
+            int passID = 0;
             Vehicle vehicle = new Vehicle("ABC123", "Car", null);
             SeasonPass monthlyPass = new MonthlyPass("123", "Active", "John Doe", vehicle, "AdditionalStatus", 1, 2);
 
@@ -18,6 +19,45 @@ namespace ParkingManagementSystem
             string user = Console.ReadLine();
             if (int.Parse(user) == 1)
             {
+                string name;
+                string id;
+                string username;
+                string password;
+                int mobile;
+                int startMon;
+                int endMon;
+                string paymentMode;
+                string plateNo;
+                string IUNo;
+                string status;
+                Console.WriteLine("Name: ");
+                name = Console.ReadLine();
+                Console.WriteLine("Staff/Student ID: ");
+                id = Console.ReadLine();
+                Console.WriteLine("Username: ");
+                username = Console.ReadLine();
+                Console.WriteLine("Password: ");
+                password = Console.ReadLine();
+                Console.WriteLine("Mobile Number:");
+                mobile = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Starting Month in integer: ");
+                startMon = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Ending Month in integer: ");
+                endMon = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Payment Mode:");
+                paymentMode = Console.ReadLine();
+                Console.WriteLine("License Plate Number:");
+                plateNo = Console.ReadLine();
+                Console.WriteLine("IU Number");
+                IUNo = Console.ReadLine();
+
+                passID++;
+                status = "valid";
+
+                
+
+
+
                 // implement Apply season Pass here
             }
             else if (int.Parse(user) == 2)

@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace ParkingManagementSystem.Services
 {
-    internal class ApplySeasonPass
+    public class ApplySeasonPass
     {
+        public ApplySeasonPass() 
+        { 
+
+        }
+
     }
 }
