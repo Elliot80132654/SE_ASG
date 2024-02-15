@@ -54,7 +54,7 @@ namespace ParkingManagementSystem
                 // create dummy data
 
                 Admin ad = new Admin(applications);
-                ad.ProcessPass();
+                ad.ProcessSeasonPass();
             }
             // Example usage of Carpark
             Carpark campusCarpark = new Carpark(1, "Campus Carpark", "Main Campus", 1, 0);

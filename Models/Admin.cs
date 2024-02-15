@@ -20,7 +20,7 @@ namespace ParkingManagementSystem.Models
             Console.WriteLine(app.AppId.ToString(), app.Name, app.UserId, app.Password, app.PassType, app.MonthStart, app.MonthEnd, app.PaymentMethod, app.Vehicle);
         }
 
-        public bool ProcessPass()
+        public bool ProcessSeasonPass()
         {
             bool approval = false;
             bool validInput = false;
