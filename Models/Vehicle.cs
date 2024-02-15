@@ -9,7 +9,7 @@ namespace ParkingManagementSystem.Models
     public class Vehicle
     {
         public string LicensePlate { get; set; }
-        public string Type { get; set; }?
+        public string Type { get; set; }
         public SeasonPass AssignedSeasonPass { get; set; }
 
         public Vehicle(string licensePlate, string type, SeasonPass assignedSeasonPass)
