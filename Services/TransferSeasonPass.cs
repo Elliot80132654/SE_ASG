@@ -12,9 +12,9 @@ namespace ParkingManagementSystem.Services
         {
             if (pass != null && pass.Vehicle.Type == "Car")
             {
-                Vehicle newVehicle = new Vehicle(newVehicleRegNumber, "Car", null); 
-                pass.TransferPassToNewVehicle(newVehicle);
+                pass.TransferPassToNewVehicle(new Vehicle(newVehicleRegNumber, "Car", null)); // Assuming null for additional details
                 Console.WriteLine("Season pass transferred to the new vehicle successfully.");
+                TransferObservable.NotifyObservers(pass, newVehicleRegNumber); // Notify observers
             }
             else if (pass == null)
             {
