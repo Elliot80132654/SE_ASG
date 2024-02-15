@@ -16,16 +16,16 @@ namespace ParkingManagementSystem
 
             DisplayMenu();
             string user = Console.ReadLine();
-            if(int.Parse(user) == 1 ) 
+            if (int.Parse(user) == 1)
             {
                 // implement Apply season Pass here
             }
-            else if(int.Parse(user) == 2)
+            else if (int.Parse(user) == 2)
             {
                 TransferSeasonPass();
-                        break;
+                break;
             }
-            else if(int.Parse(user) == 3)
+            else if (int.Parse(user) == 3)
             {
                 Console.WriteLine("Please enter your season pass ID to renew:");
                 string passId = Console.ReadLine();
@@ -48,7 +48,7 @@ namespace ParkingManagementSystem
                 monthlyPass.TerminateSeasonPass("reason");
                 // Terminate Season Pass
             }
-            else if (int.Parse(user) == 5) 
+            else if (int.Parse(user) == 5)
             {
                 List<Application> applications = new List<Application>();
                 // create dummy data
@@ -72,14 +72,11 @@ namespace ParkingManagementSystem
                 "\n2. Transfer Season Pass" +
                 "\n3. Renew Season Pass" +
                 "\n4. Terminate Season Pass" +
-                "\n5. Process Season Pass Application"+
+                "\n5. Process Season Pass Application" +
                 "\n" +
                 "\nYour option: ");
         }
-
-        using System;
-using System.Collections.Generic;
-
+    }
 namespace ParkingManagementSystem.Services
 {
     //Define the IObserver interface

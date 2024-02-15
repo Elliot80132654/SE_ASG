@@ -9,6 +9,7 @@ namespace ParkingManagementSystem.Models
     public class Admin
     {
         public List<Application> AppList {  get; set; }
+        public List<SeasonPass> PassList { get; set; }
 
         public Admin(List<Application> appList)
         {
