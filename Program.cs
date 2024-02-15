@@ -22,7 +22,8 @@ namespace ParkingManagementSystem
             }
             else if(int.Parse(user) == 2)
             {
-                // implement Transfer season pass here
+                TransferSeasonPass();
+                        break;
             }
             else if(int.Parse(user) == 3)
             {
@@ -74,6 +75,27 @@ namespace ParkingManagementSystem
                 "\n5. Process Season Pass Application"+
                 "\n" +
                 "\nYour option: ");
+        }
+
+        public static void TransferSeasonPass()
+        {
+            Console.WriteLine("Please enter your season pass ID:");
+            string passId = Console.ReadLine();
+            // Use the static method to get the season pass
+            SeasonPass pass = SeasonPassRepository.GetSeasonPassById(passId);
+
+            if (pass != null)
+            {
+                Console.WriteLine("Enter the new vehicle registration number:");
+                string newVehicleRegNumber = Console.ReadLine();
+
+                TransferSeasonPass.TransferPass(pass, newVehicleRegNumber);
+            }
+            else
+            {
+                Console.WriteLine("Invalid season pass ID. Please try again.");
+            }
+        
         }
     }
 }
