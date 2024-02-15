@@ -34,17 +34,20 @@ namespace ParkingManagementSystem.Models
                 Application selApp = AppList[int.Parse(input)]; //No safeguards to out of range
                 // Display the result
                 DisplayApp(selApp);
-                Console.WriteLine("Do you wish to approve this application? [Y/N] ");
-                string cfm = Console.ReadLine();
+                
                 while (validInput == false)
                 {
+                    Console.WriteLine("Do you wish to approve this application? [Y/N] ");
+                    string cfm = Console.ReadLine();
                     if (cfm.ToLower() == "y")
                     {
                         approval = true;
+                        validInput = true;
                     }
                     else if (cfm.ToLower() == "n")
                     {
                         approval = false;
+                        validInput = true;
                     }
                     else
                     {
